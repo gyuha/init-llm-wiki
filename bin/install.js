@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { existsSync, mkdirSync, readdirSync, copyFileSync, symlinkSync } from 'fs';
-import { join, dirname } from 'path';
+import { join, resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -14,7 +14,12 @@ if (!targetName) {
   process.exit(1);
 }
 
-const targetDir = join(process.cwd(), targetName);
+const targetDir = resolve(process.cwd(), targetName);
+
+if (!targetDir.startsWith(process.cwd() + '/')) {
+  console.error('Error: target folder must be a simple name, not a path.');
+  process.exit(1);
+}
 
 if (existsSync(targetDir)) {
   console.error(`Error: folder "${targetName}" already exists.`);
@@ -51,3 +56,4 @@ console.log(`\nDone! Wiki scaffolded at ./${targetName}`);
 console.log('\nNext steps:');
 console.log(`  cd ${targetName}`);
 console.log('  # Add sources to raw/ and run /wiki-ingest in Claude Code');
+
