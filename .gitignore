@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Obsidian
+.obsidian/
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# 임시 파일
+*.tmp
+*.bak
