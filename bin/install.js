@@ -55,5 +55,8 @@ symlinkSync('../.claude/skills', join(targetDir, '.agents', 'skills'));
 console.log(`\nDone! Wiki scaffolded at ./${targetName}`);
 console.log('\nNext steps:');
 console.log(`  cd ${targetName}`);
+console.log('  # Install qmd (required for wiki-ingest)');
+console.log('  npm install -g @tobilu/qmd');
+console.log('  # or: bun install -g @tobilu/qmd');
 console.log('  # Add sources to raw/ and run /wiki-ingest in Claude Code');
 
