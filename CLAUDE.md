@@ -37,13 +37,13 @@
 
 ## 워크플로우
 
-워크플로우는 슬래시 커맨드 스킬로 구현되어 있습니다. 자세한 절차는 각 스킬 파일을 참조하세요.
+워크플로우는 스킬로 구현되어 있습니다. 자세한 절차는 각 스킬 파일을 참조하세요.
 
 | 커맨드 | 스킬 파일 | 설명 |
 |--------|-----------|------|
-| `/wiki-ingest [파일경로]` | `.claude/commands/wiki-ingest.md` | 새 소스를 위키에 통합 |
-| `/wiki-query [질문]` | `.claude/commands/wiki-query.md` | 위키를 탐색하여 답변 합성 |
-| `/wiki-lint` | `.claude/commands/wiki-lint.md` | 위키 건강 검사 및 수정 |
+| `/wiki-ingest [파일경로]` | `.claude/skills/wiki-ingest/SKILL.md` | 새 소스를 위키에 통합 |
+| `/wiki-query [질문]` | `.claude/skills/wiki-query/SKILL.md` | 위키를 탐색하여 답변 합성 |
+| `/wiki-lint` | `.claude/skills/wiki-lint/SKILL.md` | 위키 건강 검사 및 수정 |
 
 ---
 
