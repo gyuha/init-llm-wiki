@@ -1,6 +1,6 @@
 {
   "name": "init-llm-wiki",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scaffold an LLM-maintained personal wiki powered by Claude",
   "type": "module",
   "bin": {
@@ -21,6 +21,11 @@
   "engines": {
     "node": ">=16"
   },
-  "keywords": ["llm", "wiki", "claude", "knowledge-base"],
+  "keywords": [
+    "llm",
+    "wiki",
+    "claude",
+    "knowledge-base"
+  ],
   "license": "MIT"
 }
