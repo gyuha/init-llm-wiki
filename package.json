@@ -1,6 +1,6 @@
 {
   "name": "init-llm-wiki",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Scaffold an LLM-maintained personal wiki powered by Claude",
   "type": "module",
   "bin": {
@@ -10,6 +10,14 @@
     "bin/",
     "wiki/"
   ],
+  "scripts": {
+    "prepublishOnly": "node bin/install.js test-publish && rm -rf test-publish",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish",
+    "publish:dry": "npm publish --dry-run",
+    "test": "node bin/install.js test-wiki && rm -rf test-wiki"
+  },
   "engines": {
     "node": ">=16"
   },
